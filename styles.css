@@ -43,13 +43,59 @@ body {
     width: 500px;
     height: 500px;
     background-color: white;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 10px 10px 10px gray;
 }
 
-/* Button Settings */
+/* Button & Input Settings */
+button,
+input  {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+
+
+}
+
+/*Div Wrapper for input color - only way I found for all browsers to be the same*/
+.color-wrap {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px gray;
+}
+
+input[type='color'] {
+    border: 0;
+    padding: 0;
+    width: 200%;
+    height: 200%;
+    cursor: pointer;
+    transform: translate(-25%, -25%);
+}
+
 button {
     padding: 10px 20px;
-    border: 1px solid black;
+    border: 1px solid gray;
     border-radius: 5px;
+    box-shadow: 10px 10px 10px gray;
+}
 
+/*Slider Value Read-out*/
+
+.slideValue {
+    margin-top: 20px;
+    margin-bottom: -20px;
+    font-size: 25px;
+}
+
+input[type='range'] {
+    background-color: silver;
+    border: 1px solid black;
+    height: 25px;
+    color: black;
 }
