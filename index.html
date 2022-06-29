@@ -16,18 +16,18 @@
             <div class="color-wrap">
                 <input id="colorPicker" type="color" value="#333333" />
             </div>
-            <button>Color Mode</button>
-            <button>Eraser Mode</button>
-            <button>Clear</button>
-            <div class="slideValue">16 x 16</div>
-            <input id="Slider" type="range" value="16" min="1" max="100" />
+            <button id="colorOn">Color Mode</button>
+            <button id="erase">Eraser Mode</button>
+            <button id="clear">Clear</button>
+            <div class="slideValue" id="values">16 x 16</div>
+            <input id="Slider" type="range" value="16" min="1" max="100" oninput="liveSlide()" onchange="refreshGrid(this.value)"/>
         </div>
-        <div class="grid">
+        <div class="grid" id="grid">
             
         </div>
     </main>
 
-    <script>"scripts.js"</script>
+    <script src="script.js"></script>
 
 </body>
 </html>

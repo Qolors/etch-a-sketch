@@ -99,3 +99,8 @@ input[type='range'] {
     height: 25px;
     color: black;
 }
+
+/*This allows the mouse to be held down on painting*/
+.grid-element {
+    user-select: none;
+}
