@@ -4,9 +4,10 @@ html {
 }
 
 body {
-    background-color: silver;
+    background-color: #ECE6C2;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 100px;
+    color: #6F5643;
 }
 
 /* Header Settings */
@@ -80,9 +81,18 @@ input[type='color'] {
 
 button {
     padding: 10px 20px;
-    border: 1px solid gray;
+    border: none;
+    background-color: #73bda8;
     border-radius: 5px;
+    color: white;
     box-shadow: 10px 10px 10px gray;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+button:hover {
+    box-shadow: 
+    10px 10px 8px gray;
 }
 
 /*Slider Value Read-out*/
@@ -94,7 +104,7 @@ button {
 }
 
 input[type='range'] {
-    background-color: silver;
+    background-color: #73bda8;
     border: 1px solid black;
     height: 25px;
     color: black;
@@ -104,3 +114,47 @@ input[type='range'] {
 .grid-element {
     user-select: none;
 }
+
+
+/* Media Query */
+
+@media (max-width: 1200px) {
+    .main {
+      justify-content: center;
+    }
+  }
+  
+@media (max-width: 850px) {
+    .main {
+      gap: 50px;
+    }
+  
+    .settings {
+      width: 150px;
+      gap: 16px;
+    }
+  
+    .size-value {
+      margin-bottom: -4px;
+    }
+  
+    .grid {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  
+@media (max-width: 650px) {
+    .title {
+      font-size: 50px;
+    }
+  
+    .main {
+      flex-direction: column-reverse;
+    }
+  
+    .grid {
+      width: 300px;
+      height: 300px;
+    }
+  }
