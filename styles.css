@@ -4,10 +4,10 @@ html {
 }
 
 body {
-    background-color: #ECE6C2;
+    background-color: #2E3440;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 100px;
-    color: #6F5643;
+    color: white;
 }
 
 /* Header Settings */
@@ -44,7 +44,7 @@ body {
     width: 500px;
     height: 500px;
     background-color: white;
-    box-shadow: 10px 10px 10px gray;
+    box-shadow: 10px 10px 10px black;
 }
 
 /* Button & Input Settings */
@@ -57,8 +57,6 @@ input  {
     font-family: inherit;
     font-size: inherit;
     outline: none;
-
-
 }
 
 /*Div Wrapper for input color - only way I found for all browsers to be the same*/
@@ -67,7 +65,13 @@ input  {
     height: 80px;
     border-radius: 80px;
     overflow: hidden;
-    box-shadow: 10px 10px 10px gray;
+    box-shadow: 10px 10px 10px black;
+    transition: .5s;
+    opacity: 0;
+    animation-name: latefade;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-delay: 2s;
 }
 
 input[type='color'] {
@@ -76,23 +80,30 @@ input[type='color'] {
     width: 200%;
     height: 200%;
     cursor: pointer;
+    background-color: black;
     transform: translate(-25%, -25%);
+}
+
+.color-wrap:hover {
+  box-shadow: .2em .2em .2rem black;
 }
 
 button {
     padding: 10px 20px;
     border: none;
-    background-color: #73bda8;
-    border-radius: 5px;
+    background-color: #4C566A;
+    border-radius: 10px;
     color: white;
-    box-shadow: 10px 10px 10px gray;
+    box-shadow: .5em .5em .5em black;
     font-weight: bold;
     transition: 0.5s;
+    visibility: hidden;
 }
 
 button:hover {
     box-shadow: 
-    10px 10px 8px gray;
+    .1em .1em .2em black;
+    
 }
 
 /*Slider Value Read-out*/
@@ -113,7 +124,57 @@ input[type='range'] {
 /*This allows the mouse to be held down on painting*/
 .grid-element {
     user-select: none;
+    transition: .2s;
 }
+
+/* on Load up transitions */
+
+#erase,
+#clear,
+#colorOn {
+  animation-duration: 1s;
+  animation-name: fadein;
+  animation-fill-mode: forwards;
+}
+
+#erase {
+  animation-delay: .5s
+}
+
+#clear {
+  animation-delay: 1s
+}
+
+@keyframes fadein {
+  0% {
+    margin-right: 300px;
+    opacity: 0;
+    box-shadow: 0 0 0 black;
+    visibility: hidden;
+  } 
+  
+  75% {
+    margin-right: -100px;
+    box-shadow: 0 0 0 black;
+    opacity: .5;
+    visibility: visible;
+  }
+  100% {
+    margin-right: 0px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes latefade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 
 /* Media Query */

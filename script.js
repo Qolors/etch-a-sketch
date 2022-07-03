@@ -27,6 +27,7 @@ function paint(e) {
         e.target.style.backgroundColor = "white";
     } else {
         e.target.style.backgroundColor = "black";
+
     }
 }
 
@@ -82,15 +83,20 @@ function toggleColor() {
         color.value = "ON";
         if (eraser.value === "ON") {
             eraser.value = "OFF"
-            eraser.style.backgroundColor = "#73bda8";
+            eraser.style.backgroundColor = "#4C566A";
             eraser.style.color = "white";
+            eraser.style.border = "none";
         }
-        color.style.backgroundColor = "silver";
-        color.style.color = "black";
+        color.style.backgroundColor = "#3B4252";
+        color.style.color = "white";
+        color.style.border = "1px solid white";
+        color.innerHTML = "Color Wheel On";
     } else {
         color.value = "OFF";
-        color.style.backgroundColor = "#73bda8";
+        color.style.backgroundColor = "#4C566A";
         color.style.color = "white";
+        color.style.border = "none";
+        color.innerHTML = "Color Wheel Off";
     };
 };
 
@@ -99,14 +105,18 @@ function toggleEraser() {
         eraser.value = "ON";
         if (color.value === "ON") {
             color.value = "OFF"
-            color.style.backgroundColor = "#73bda8";
+            color.style.backgroundColor = "#4C566A";
             color.style.color = "white";
+            color.style.border = "none";
+            color.innerHTML = "Color Wheel Off"
         }
-        eraser.style.backgroundColor = "silver";
-        eraser.style.color = "black";
+        eraser.style.backgroundColor = "#3B4252";
+        eraser.style.color = "white";
+        eraser.style.border = "1px solid white";
     } else {
         eraser.value = "OFF";
-        eraser.style.backgroundColor = "#73bda8";
+        eraser.style.backgroundColor = "#4C566A";
         eraser.style.color = "white";
+        eraser.style.border = "none";
     };
 }
